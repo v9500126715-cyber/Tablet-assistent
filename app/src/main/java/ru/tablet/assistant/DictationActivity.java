@@ -20,7 +20,7 @@ public class DictationActivity extends Activity {
   if(request!=1 || result!=RESULT_OK || data==null) {finish(); return;}
   ArrayList<String> results=data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
   if(results==null || results.isEmpty()) {finish();return;}
-  LinearLayout l=new LinearLayout(this); l.setOrientation(1); l.setPadding(24,24,24,24);
+  LinearLayout l=new LinearLayout(this); l.setOrientation(LinearLayout.VERTICAL); l.setPadding(24,24,24,24);
   TextView warning=new TextView(this); warning.setText("Текст заменит всё содержимое выбранного поля:"); l.addView(warning);
   EditText text=new EditText(this); text.setText(results.get(0)); l.addView(text);
   Button insert=new Button(this); insert.setText("Вставить"); l.addView(insert);
