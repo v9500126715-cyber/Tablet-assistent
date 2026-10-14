@@ -2,7 +2,7 @@ package ru.tablet.assistant;
 import android.app.Activity; import android.os.Bundle; import android.content.Intent; import android.provider.Settings; import android.widget.*; import android.graphics.Color; import android.graphics.Typeface;
 public class MainActivity extends Activity {
  void label(LinearLayout l,String t,int size,String color) {TextView v=new TextView(this);v.setText(t);v.setTextSize(size);v.setTextColor(Color.parseColor(color));v.setPadding(0,12,0,20);l.addView(v);}
- public void onCreate(Bundle b) {super.onCreate(b); ScrollView scroll=new ScrollView(this); LinearLayout l=new LinearLayout(this);l.setOrientation(1);l.setPadding(32,40,32,40);scroll.addView(l);
+ public void onCreate(Bundle b) {super.onCreate(b); ScrollView scroll=new ScrollView(this); LinearLayout l=new LinearLayout(this);l.setOrientation(LinearLayout.VERTICAL);l.setPadding(32,40,32,40);scroll.addView(l);
  label(l,"ATELIER  /  TABLET ASSISTANT",12,"#C9AA70");label(l,"Ваш голос.\nВаше действие.",34,"#F3EEE5");
  label(l,"Прототип 0.1 • Русская диктовка",14,"#C9AA70");
  label(l,"01  Включите помощника",20,"#F3EEE5");
